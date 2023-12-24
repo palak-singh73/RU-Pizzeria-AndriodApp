@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DBF3E8"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/MenuTitle"
+            android:layout_width="match_parent"
+            android:layout_height="136dp"
+            android:fontFamily="cursive"
+            android:gravity="center"
+            android:text="@string/ru_pizza"
+            android:textAlignment="center"
+            android:textColor="#AC001A"
+            android:textSize="60sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="175dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/SpecialityMenuImage"
+                android:layout_width="74dp"
+                android:layout_height="141dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/specialityicon" />
+
+            <Button
+                android:id="@+id/SPMenuButton"
+                android:layout_width="15dp"
+                android:layout_height="61dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:onClick="showSPOrdering"
+                android:text="@string/order_speciality_pizza"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/BYOMenuImage"
+                android:layout_width="181dp"
+                android:layout_height="133dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/byo" />
+
+            <Button
+                android:id="@+id/BYOMenuButton"
+                android:layout_width="129dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:onClick="showBYOOrdering"
+                android:text="@string/build_your_own_pizza" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="149dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/CartMenuImage"
+                android:layout_width="150dp"
+                android:layout_height="117dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ordercart" />
+
+            <Button
+                android:id="@+id/OrderButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:onClick="showOrderView"
+                android:text="@string/order" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/background"
+            android:layout_width="match_parent"
+            android:layout_height="155dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/StoreMenuImage"
+                android:layout_width="148dp"
+                android:layout_height="136dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/store" />
+
+            <Button
+                android:id="@+id/StoreOrderButton"
+                android:layout_width="92dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:onClick="showStoreOrder"
+                android:text="@string/store_orders" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

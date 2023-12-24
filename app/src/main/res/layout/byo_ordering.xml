@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DBF3E8">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/BYOHeader"
+                android:layout_width="match_parent"
+                android:layout_height="81dp"
+                android:fontFamily="casual"
+                android:gravity="center"
+                android:text="@string/build_your_own_pizza"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="203dp"
+                app:srcCompat="@drawable/byo" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <Spinner
+                        android:id="@+id/SizeSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp" />
+
+                    <Spinner
+                        android:id="@+id/SauceSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <CheckBox
+                        android:id="@+id/BYOExtraSauceCheck"
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:text="@string/extra_sauce"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/BYOExtraCheeseCheck"
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:text="@string/extra_cheese"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/AdditionalSubHeading"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:fontFamily="casual"
+                android:text="@string/additional_topping_choices"
+                android:textSize="24sp" />
+
+            <ListView
+                android:id="@+id/AvaliableToppingsList"
+                android:layout_width="match_parent"
+                android:layout_height="200dp" />
+
+            <TextView
+                android:id="@+id/SelectedSubHeading"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:fontFamily="casual"
+                android:text="@string/toppings_selected"
+                android:textSize="24sp" />
+
+            <ListView
+                android:id="@+id/SelectedToppingsList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <LinearLayout
+                android:layout_width="349dp"
+                android:layout_height="71dp"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/BYOPriceLabel"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center|right"
+                    android:text="@string/price"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/BYOPriceDisplay"
+                    android:layout_width="81dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:fontFamily="casual"
+                    android:gravity="left"
+                    android:textSize="30sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/BYOAddToOrderButton"
+                android:layout_width="350dp"
+                android:layout_height="64dp"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif-smallcaps"
+                android:text="@string/add_to_order"
+                android:textSize="34sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
